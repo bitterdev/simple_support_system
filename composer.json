@@ -1,0 +1,9 @@
+{
+  "name": "bitter/simple_support_system",
+  "type": "concrete5-package",
+  "autoload": {
+    "psr-4": {
+      "Bitter\\SimpleSupportSystem\\": "src/Bitter/SimpleSupportSystem"
+    }
+  }
+}

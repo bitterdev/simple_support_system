@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concrete5-cif version="1.0">
+    <blocktypes>
+        <blocktype handle="project_list" package="simple_support_system"/>
+        <blocktype handle="ticket_details" package="simple_support_system"/>
+        <blocktype handle="ticket_list" package="simple_support_system"/>
+        <blocktype handle="ticket_create" package="simple_support_system"/>
+    </blocktypes>
+
+    <blocktypesets>
+        <blocktypeset handle="simple_support_system" name="Simple Support System" package="simple_support_system">
+            <blocktype handle="project_list"/>
+            <blocktype handle="ticket_details"/>
+            <blocktype handle="ticket_list"/>
+            <blocktype handle="ticket_create"/>
+        </blocktypeset>
+    </blocktypesets>
+
+    <singlepages>
+        <page name="Simple Support System" path="/dashboard/simple_support_system"
+              filename="/dashboard/simple_support_system/simple_support_system.php" package="simple_support_system"/>
+        <page name="Settings" path="/dashboard/simple_support_system/settings"
+              filename="/dashboard/simple_support_system/simple_support_system/settings.php"
+              package="simple_support_system"/>
+        <page name="Projects" path="/dashboard/simple_support_system/projects"
+              filename="/dashboard/simple_support_system/simple_support_system/projects.php"
+              package="simple_support_system"/>
+    </singlepages>
+
+    <pages>
+        <page name="Support" path="/support" public-date="2020-11-22 14:21:05" filename="" pagetype="page"
+              template="full" user="admin" description="" package="simple_support_system">
+            <area name="Main">
+                <blocks>
+                    <block type="project_list" name="">
+                        <data table="btProjectList">
+                            <record>
+                                <ticketListPageId>{ccm:export:page:/support/project}</ticketListPageId>
+                                <createTicketPageId>{ccm:export:page:/support/project/create-ticket}
+                                </createTicketPageId>
+                            </record>
+                        </data>
+                    </block>
+                </blocks>
+            </area>
+        </page>
+
+        <page name="Project" path="/support/project" public-date="2020-11-22 14:21:39" filename="" pagetype="page"
+              template="full" user="admin" description="" package="simple_support_system">
+            <area name="Main">
+                <blocks>
+                    <block type="ticket_list" name="">
+                        <data table="btTicketList">
+                            <record>
+                                <ticketDetailPageId>{ccm:export:page:/support/project/tickets}</ticketDetailPageId>
+                                <createTicketPageId>{ccm:export:page:/support/project/create-ticket}
+                                </createTicketPageId>
+                            </record>
+                        </data>
+                    </block>
+                </blocks>
+            </area>
+        </page>
+
+        <page name="Tickets" path="/support/project/tickets" public-date="2020-11-22 14:22:32" filename=""
+              pagetype="page" template="full" user="admin" description="" package="simple_support_system">
+            <area name="Main">
+                <blocks>
+                    <block type="ticket_details" name="">
+                        <data table="btTicketDetails">
+                            <record/>
+                        </data>
+                    </block>
+                </blocks>
+            </area>
+        </page>
+
+        <page name="Create Ticket" path="/support/project/create-ticket" public-date="2020-11-22 14:22:51" filename=""
+              pagetype="page" template="full" user="admin" description="" package="simple_support_system">
+            <area name="Main">
+                <blocks>
+                    <block type="ticket_create" name="">
+                        <data table="btTicketCreate">
+                            <record>
+                                <thankYouMessage>
+                                    <![CDATA[Your ticket has been successfully created.]]></thankYouMessage>
+                                <submitText><![CDATA[Create Ticket]]></submitText>
+                                <displayCaptcha><![CDATA[1]]></displayCaptcha>
+                                <redirectCID><![CDATA[0]]></redirectCID>
+                            </record>
+                        </data>
+                    </block>
+                </blocks>
+            </area>
+        </page>
+    </pages>
+</concrete5-cif>

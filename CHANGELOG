@@ -1,0 +1,17 @@
+Version 1.0.0
+==================================================
+- Add a moderation mode
+
+Version 0.9.2
+==================================================
+- Display Ticket details after the ticket is created (only when a redirect page is setted and this page contains the details block)
+- Fix keyword search for dashboard page projects
+- Log Creating Tickets, Comments, and state changes
+
+Version 0.9.1
+==================================================
+- Make API access not required
+
+Version 0.9.0
+==================================================
+- Submitted to PRB

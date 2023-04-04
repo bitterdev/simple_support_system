@@ -1,0 +1,21 @@
+{
+  "title": "Simple Support System",
+  "supportHostedOffsite": true,
+  "supportHostedOffsiteUrl": "https://www.bitter.de/support",
+  "singlePrice": 150,
+  "skillLevel": "Beginner",
+  "keywords": "fabian bitter, support, support system, ticket, tickets, ticket management, create, list, read, update, manager, help, desk, helpdesk, mail, notifactions, api, access",
+  "shortDescription": "Feature-rich self-hosted support system that fully complies with GDPR and doesn\'t require any 3rd party services.",
+  "categories": [16, 1273, 50],
+  "supportPlan": 12,
+  "screenshots": [
+      "https://bitter.de/public/4116/0727/4503/1.jpg",
+      "https://bitter.de/public/1116/0727/4505/2.jpg",
+      "https://bitter.de/public/9116/0727/4505/3.jpg",
+      "https://bitter.de/public/1516/0727/4507/4.jpg",
+      "https://bitter.de/public/1116/0727/4507/5.jpg",
+      "https://bitter.de/public/9316/0727/4508/6.jpg",
+      "https://bitter.de/public/2116/0727/4509/7.jpg",
+      "https://bitter.de/public/2116/0727/4510/8.jpg"
+  ],
+}

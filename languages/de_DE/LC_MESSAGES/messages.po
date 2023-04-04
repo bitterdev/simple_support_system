@@ -1,0 +1,729 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple_support_system 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-04-14T01:01:40+02:00\n"
+"PO-Revision-Date: 2021-10-21 21:09+0200\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.0\n"
+
+#: packages/simple_support_system/install.xml:11
+msgctxt "BlockTypeSetName"
+msgid "Simple Support System"
+msgstr "Simple Support System"
+
+#: packages/simple_support_system/install.xml:21
+#: packages/simple_support_system/controller.php:38
+msgid "Simple Support System"
+msgstr "Simple Support System"
+
+#: packages/simple_support_system/install.xml:24
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: packages/simple_support_system/install.xml:27
+msgid "Projects"
+msgstr "Projekte"
+
+#: packages/simple_support_system/install.xml:32
+#: packages/simple_support_system/elements/dashboard/help.php:44
+msgid "Support"
+msgstr "Support"
+
+#: packages/simple_support_system/install.xml:33
+#: packages/simple_support_system/install.xml:50
+#: packages/simple_support_system/install.xml:67
+#: packages/simple_support_system/install.xml:80
+msgctxt "AreaName"
+msgid "Main"
+msgstr "Allgemein"
+
+#: packages/simple_support_system/install.xml:49
+#: packages/simple_support_system/blocks/ticket_create/view.php:66
+msgid "Project"
+msgstr "Projekt"
+
+#: packages/simple_support_system/install.xml:66
+msgid "Tickets"
+msgstr "Tickets"
+
+#: packages/simple_support_system/install.xml:79
+#: packages/simple_support_system/blocks/ticket_list/view.php:28
+#: packages/simple_support_system/blocks/project_list/view.php:25
+#: packages/simple_support_system/blocks/ticket_create/controller.php:102
+#: packages/simple_support_system/blocks/ticket_create/controller.php:107
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:89
+msgid "Create Ticket"
+msgstr "Ticket erstellen"
+
+#: packages/simple_support_system/controller.php:33
+msgid "Feature-rich self-hosted support system that fully complies with GDPR and doesn't require any 3rd party services."
+msgstr "Feature-reiches selbst gehostetes Supportsystem, das die DSGVO vollständig erfüllt und keine Dienste von Drittanbietern erfordert."
+
+#: packages/simple_support_system/controller.php:72
+msgid "You need to enable public registration first to use this add-on."
+msgstr "Sie müssen zuerst die öffentliche Registrierung aktivieren, um dieses Add-On verwenden zu können."
+
+#: packages/simple_support_system/blocks/ticket_list/controller.php:37
+msgid "Display a ticket list on your site."
+msgstr "Zeigen Sie eine Ticketliste auf Ihrer Website an."
+
+#: packages/simple_support_system/blocks/ticket_list/controller.php:42
+msgid "Ticket List"
+msgstr "Liste der Tickets"
+
+#: packages/simple_support_system/blocks/ticket_list/controller.php:73
+msgid "Invalid Project id."
+msgstr "Ungültige Projekt-ID."
+
+#: packages/simple_support_system/blocks/ticket_list/edit.php:33
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/settings.php:49
+msgid "Ticket Detail Page"
+msgstr "Ticket-Detailseite"
+
+#: packages/simple_support_system/blocks/ticket_list/edit.php:38
+#: packages/simple_support_system/blocks/project_list/edit.php:38
+msgid "Create TicketPage"
+msgstr "TicketPage erstellen"
+
+#: packages/simple_support_system/blocks/ticket_list/view.php:41
+#: packages/simple_support_system/blocks/project_list/view.php:37
+#: packages/simple_support_system/blocks/ticket_create/view.php:81
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:64
+msgid "Title"
+msgstr "Titel"
+
+#: packages/simple_support_system/blocks/ticket_list/view.php:44
+#: packages/simple_support_system/blocks/ticket_create/view.php:91
+#: packages/simple_support_system/blocks/ticket_details/view.php:240
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:74
+msgid "Type"
+msgstr "Typ"
+
+#: packages/simple_support_system/blocks/ticket_list/view.php:47
+#: packages/simple_support_system/blocks/ticket_create/view.php:96
+#: packages/simple_support_system/blocks/ticket_details/view.php:250
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:79
+msgid "Priority"
+msgstr "Priorität"
+
+#: packages/simple_support_system/blocks/ticket_list/view.php:50
+msgid "Status"
+msgstr "Status"
+
+#: packages/simple_support_system/blocks/ticket_list/view.php:53
+msgid "Created"
+msgstr "Erstellt"
+
+#: packages/simple_support_system/blocks/ticket_list/view.php:56
+msgid "Updated"
+msgstr "Aktualisiert"
+
+#: packages/simple_support_system/blocks/ticket_list/view.php:95
+msgid "There are no tickets available."
+msgstr "Es sind keine Tickets verfügbar."
+
+#: packages/simple_support_system/blocks/project_list/controller.php:32
+msgid "Display a project list on your site."
+msgstr "Zeigen Sie eine Projektliste auf Ihrer Website an."
+
+#: packages/simple_support_system/blocks/project_list/controller.php:37
+msgid "Project List"
+msgstr "Projektliste"
+
+#: packages/simple_support_system/blocks/project_list/edit.php:33
+msgid "Ticket List Page"
+msgstr "Ticketlistenseite"
+
+#: packages/simple_support_system/blocks/project_list/view.php:41
+msgid "Total Tickets"
+msgstr "Gesamte Tickets"
+
+#: packages/simple_support_system/blocks/project_list/view.php:62
+msgid "There are no projects available."
+msgstr "Es sind keine Projekte verfügbar."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:80
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:22
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:199
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:81
+msgid "Bug"
+msgstr "Fehler"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:81
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:23
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:200
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:82
+msgid "Enhancement"
+msgstr "Verbesserung"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:82
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:24
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:201
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:83
+msgid "Proposal"
+msgstr "Vorschlag"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:83
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:25
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:202
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:84
+msgid "Task"
+msgstr "Aufgabe"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:87
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:29
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:232
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:88
+msgid "Trivial"
+msgstr "Trivial"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:88
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:30
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:233
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:89
+msgid "Minor"
+msgstr "Geringfügig"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:89
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:31
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:234
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:90
+msgid "Major"
+msgstr "Hauptfach"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:90
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:32
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:235
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:91
+msgid "Critical"
+msgstr "Kritisch"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:91
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:33
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:236
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:92
+msgid "Blocker"
+msgstr "Blocker"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:97
+msgid "Display a create ticket form on your site."
+msgstr "Zeigen Sie ein Ticketformular auf Ihrer Website an."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:108
+#: packages/simple_support_system/controllers/dialog/support/create_ticket.php:57
+msgid "Your ticket has been successfully created."
+msgstr "Ihr Ticket wurde erfolgreich eröffnet!"
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:126
+msgid "You need to enter a thank you message."
+msgstr "Sie müssen eine Dankeschön-Nachricht eingeben."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:127
+msgid "You need to enter a submit text."
+msgstr "Sie müssen einen Übermittlungstext eingeben."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:174
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:105
+msgid "You need to select a project."
+msgstr "Sie müssen ein Projekt auswählen."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:175
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:108
+msgid "You need to enter a title."
+msgstr "Sie müssen einen Titel eingeben."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:176
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:109
+msgid "You need to enter a content."
+msgstr "Sie müssen einen Inhalt eingeben."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:177
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:110
+msgid "You need to select a type."
+msgstr "Sie müssen einen Typ auswählen."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:178
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:111
+msgid "You need to select a priority."
+msgstr "Sie müssen eine Priorität auswählen."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:181
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:114
+msgid "You need to enter a valid email address."
+msgstr "Sie müssen eine gültige E-Mail-Adresse eingeben."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:186
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:119
+msgid "The given type is invalid."
+msgstr "Der angegebene Typ ist ungültig."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:188
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:121
+msgid "The given priority is invalid."
+msgstr "Die angegebene Priorität ist ungültig."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:194
+#: packages/simple_support_system/blocks/ticket_details/controller.php:197
+msgid "Invalid captcha code."
+msgstr "Ungültiger Captcha-Code."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:243
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:174
+msgid "Malformed request."
+msgstr "Falsch formatierte Anforderung."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:284
+#: packages/simple_support_system/blocks/ticket_create/controller.php:302
+#: packages/simple_support_system/blocks/ticket_details/controller.php:248
+#: packages/simple_support_system/blocks/ticket_details/controller.php:266
+#: packages/simple_support_system/blocks/ticket_details/controller.php:350
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:220
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:238
+msgid "There was an error while sending the mail."
+msgstr "Beim Senden der E-Mail ist ein Fehler aufgetreten."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:311
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:248
+#, php-format
+msgid "Ticket %s was successfully created."
+msgstr "Ticket %s wurde erfolgreich erstellt."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:320
+msgid "Thank you. We have received your ticket. To avoid spamming your ticket needs to be reviewed before it will published at this site."
+msgstr "Vielen Dank. Wir haben Ihr Ticket erhalten. Um Spamming Zu vermeiden, muss Ihr Ticket überprüft werden, bevor es auf dieser Website veröffentlicht wird."
+
+#: packages/simple_support_system/blocks/ticket_create/controller.php:325
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/API/V1/Tickets.php:251
+msgid "The given project id is invalid."
+msgstr "Die angegebene Projekt-ID ist ungültig."
+
+#: packages/simple_support_system/blocks/ticket_create/edit.php:35
+msgid "Submit Text"
+msgstr "Text einreichen"
+
+#: packages/simple_support_system/blocks/ticket_create/edit.php:40
+msgid "Message to display when completed"
+msgstr "Nach Abschluss anzuzeigende Nachricht"
+
+#: packages/simple_support_system/blocks/ticket_create/edit.php:45
+msgid "Redirect to another page after form submission?"
+msgstr "Nach Absenden auf andere Seite umleiten?"
+
+#: packages/simple_support_system/blocks/ticket_create/edit.php:50
+msgid "This page needs to contain the detail block."
+msgstr "Diese Seite muss den Detailblock enthalten."
+
+#: packages/simple_support_system/blocks/ticket_create/edit.php:57
+#: packages/simple_support_system/blocks/ticket_details/edit.php:32
+msgid "Display Captcha"
+msgstr "Captcha anzeigen"
+
+#: packages/simple_support_system/blocks/ticket_create/view.php:75
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:59
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: packages/simple_support_system/blocks/ticket_create/view.php:86
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:69
+msgid "Content"
+msgstr "Inhalt"
+
+#: packages/simple_support_system/blocks/ticket_create/view.php:101
+msgid "Attachment"
+msgstr "Anhang"
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:77
+msgid "Display ticket details on your site."
+msgstr "Zeigen Sie die Ticketdetails auf Ihrer Website an."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:82
+msgid "Ticket Details"
+msgstr "Ticket Details"
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:105
+#: packages/simple_support_system/blocks/ticket_details/controller.php:143
+#: packages/simple_support_system/blocks/ticket_details/controller.php:292
+#: packages/simple_support_system/blocks/ticket_details/controller.php:363
+msgid "Invalid ticket id."
+msgstr "Ungültige Ticket-ID."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:121
+msgid "The comment has been approved."
+msgstr "Der Kommentar wurde angenommen."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:125
+#: packages/simple_support_system/blocks/ticket_details/controller.php:167
+msgid "Invalid ticket comment id."
+msgstr "Ungültige Ticketkommentar-ID."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:139
+msgid "The ticket has been approved."
+msgstr "Das Ticket wurde genehmigt."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:158
+#, php-format
+msgid "Comment was removed from ticket %s."
+msgstr "Der Kommentar wurde aus dem Ticket-%s entfernt."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:183
+msgid "You need to enter a comment."
+msgstr "Sie müssen einen Kommentar eingeben."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:275
+#, php-format
+msgid "Comment was added to ticket %s."
+msgstr "Der Kommentar wurde dem Ticket-%s hinzugefügt."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:280
+msgid "Thank you. We have received your comment. To avoid spamming your comment needs to be reviewed before it will published at this site."
+msgstr "Vielen Dank. Wir haben Ihren Kommentar erhalten. Um Spamming Zu vermeiden, muss Ihr Kommentar überprüft werden, bevor er auf dieser Website veröffentlicht wird."
+
+#: packages/simple_support_system/blocks/ticket_details/controller.php:319
+#, php-format
+msgid "State of ticket %s has been changed."
+msgstr "Der Zustand der %s wurde geändert."
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:42
+msgid "You need to select a ticket."
+msgstr "Sie müssen ein Ticket auswählen."
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:51
+msgid "Resolve"
+msgstr "Lösen"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:56
+msgid "Workflow"
+msgstr "Workflow"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:62
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:163
+msgid "Open"
+msgstr "Offen"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:68
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:164
+msgid "On Hold"
+msgstr "Wartend"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:74
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:165
+msgid "Resolved"
+msgstr "Gelöst"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:80
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:166
+msgid "Duplicate"
+msgstr "Duplizieren"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:86
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:167
+msgid "Invalid"
+msgstr "Ungültig"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:92
+msgid "Won't fix"
+msgstr "Wird nicht behoben"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:98
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:169
+msgid "Closed"
+msgstr "Geschlossen"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:131
+#, php-format
+msgid "Ticket %s"
+msgstr "Ticket %s"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:140
+#, php-format
+msgid "%s created an ticket at %s"
+msgstr "%s ein Ticket bei %s erstellt"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:168
+#, php-format
+msgid "%s Comment"
+msgid_plural "%s Comments"
+msgstr[0] "%s Kommentar(e)"
+msgstr[1] "%s Kommentare"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:175
+#, php-format
+msgid "%s created an comment at %s"
+msgstr "%s hat einen Kommentar bei %s erstellt"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:185
+msgid "Delete"
+msgstr "Löschen"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:200
+msgid "Comment"
+msgstr "Kommentar"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:223
+msgid "Add Comment"
+msgstr "Kommentar hinzufügen"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:228
+msgid "Login to comment"
+msgstr "Login zum kommentieren"
+
+#: packages/simple_support_system/blocks/ticket_details/view.php:260
+msgid "State"
+msgstr "Bundesland"
+
+#: packages/simple_support_system/mail/approve_comment.php:21
+#, php-format
+msgid "[Approve Comment] [%s] Ticket %s: %s"
+msgstr "[Kommentar genehmigen] [%s] Ticket %s: %s"
+
+#: packages/simple_support_system/mail/approve_comment.php:29
+msgid "Click the following link to approve the comment if it's no spam."
+msgstr "Klicken Sie auf den folgenden Link, um den Kommentar zu genehmigen, wenn es sich nicht um Spam handelt."
+
+#: packages/simple_support_system/mail/approve_ticket.php:21
+#, php-format
+msgid "[Approve Ticket] [%s] Ticket %s: %s"
+msgstr "[Ticket genehmigt] [%s] Ticket %s: %s"
+
+#: packages/simple_support_system/mail/approve_ticket.php:29
+msgid "Click the following link to approve the ticket if it's no spam."
+msgstr "Klicken Sie auf den folgenden Link, um das Ticket zu genehmigen, wenn es sich nicht um Spam handelt."
+
+#: packages/simple_support_system/mail/change_ticket_state.php:21
+#, php-format
+msgid "[Change Ticket State] [%s] Ticket %s: %s"
+msgstr "[Ticketstatus geändert] [%s] Ticket %s: %s"
+
+#: packages/simple_support_system/mail/change_ticket_state.php:27
+#, php-format
+msgid "The ticket state has been changed to: %s"
+msgstr "Der Ticketstatus wurde geändert in: %s"
+
+#: packages/simple_support_system/mail/change_ticket_state.php:29
+#: packages/simple_support_system/mail/new_comment.php:29
+#: packages/simple_support_system/mail/new_ticket.php:29
+msgid "If you can't click the issue link, please copy the link manually and paste it to the address bar of your browser."
+msgstr "Wenn Sie nicht auf den Problemlink klicken können, kopieren Sie den Link manuell und fügen Sie ihn in die Adressleiste Ihres Browsers ein."
+
+#: packages/simple_support_system/mail/new_comment.php:21
+#, php-format
+msgid "[New Comments] [%s] Ticket %s: %s"
+msgstr "[Neue Kommentare] [%s] Ticket %s: %s"
+
+#: packages/simple_support_system/mail/new_ticket.php:21
+#, php-format
+msgid "[New Ticket] [%s] Ticket %s: %s"
+msgstr "[Neues Ticket] [%s] Ticket %s: %s"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/projects/edit.php:37
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/ColumnSet/Column/ProjectNameColumn.php:28
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/Field/Field/ProjectNameField.php:32
+msgid "Project Name"
+msgstr "Projektname"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/projects/edit.php:56
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/ColumnSet/Column/ProjectHandleColumn.php:28
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/Field/Field/ProjectHandleField.php:32
+msgid "Project Handle"
+msgstr "Projekt-Handle"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/projects/edit.php:75
+msgid "Back"
+msgstr "Zurück"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/projects/edit.php:80
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/settings.php:64
+msgid "Save"
+msgstr "Speichern"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/projects.php:30
+msgid "Currently there are no projects available."
+msgstr "Derzeit sind keine Projekte verfügbar."
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/projects.php:73
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/projects.php:79
+msgid "Remove"
+msgstr "Entfernen"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/settings.php:44
+msgid "Notification Mail Address"
+msgstr "Benachrichtigungs-E-Mail-Adresse"
+
+#: packages/simple_support_system/single_pages/dashboard/simple_support_system/settings.php:57
+msgid "Enable Moderation"
+msgstr "Moderation aktivieren"
+
+#: packages/simple_support_system/elements/dashboard/did_you_know.php:96
+msgid "Did you know?"
+msgstr "Schon gewusst?"
+
+#: packages/simple_support_system/elements/dashboard/did_you_know.php:105
+#: packages/simple_support_system/elements/dashboard/did_you_know.php:135
+#: packages/simple_support_system/elements/dashboard/help.php:32
+#: packages/simple_support_system/elements/dashboard/reminder.php:35
+msgid "here"
+msgstr "hier"
+
+#: packages/simple_support_system/elements/dashboard/did_you_know.php:102
+#, php-format
+msgid "I have many other add-ons to power up your site. Maybe the following add-on sounds interesting to you? If you want to see a full list with all of my add-ons, please click %s. As an existing customer you will get 10%% discount on your next purchase."
+msgstr "Ich habe viele andere Add-ons, um Ihre Website einzuschalten. Vielleicht klingt das folgende Add-on für Sie interessant? Wenn Sie eine vollständige Liste mit allen meinen Add-Ons sehen möchten, klicken Sie bitte auf %s. Als Bestehender erhalten Sie 10%% Rabatt auf Ihren nächsten Einkauf."
+
+#: packages/simple_support_system/elements/dashboard/did_you_know.php:120
+msgid "Details"
+msgstr "Details"
+
+#: packages/simple_support_system/elements/dashboard/did_you_know.php:135
+#, php-format
+msgid "Click %s to hide."
+msgstr "Klicken Sie %s zum Ausblenden."
+
+#: packages/simple_support_system/elements/dashboard/help.php:28
+#, php-format
+msgid "If you need support please click %s."
+msgstr "Wenn Sie Unterstützung benötigen, klicken Sie bitte auf %s."
+
+#: packages/simple_support_system/elements/dashboard/install_post.php:24
+msgid "Thank You for purchasing this add-on!"
+msgstr "Vielen Dank für den Kauf dieses Add-on!"
+
+#: packages/simple_support_system/elements/dashboard/install_post.php:28
+msgid "Follow me on Twitter and Facebook to get the latest news and notifications about updates, new add-ons/themes and special offers."
+msgstr "Folgen Sie mir auf Twitter und Facebook, um die neuesten Nachrichten und Benachrichtigungen über Updates, neue Add-ons/Themen und Sonderangebote zu erhalten."
+
+#: packages/simple_support_system/elements/dashboard/install_post.php:37
+msgid "Follow @fabian_bitter"
+msgstr "@fabian_bitter"
+
+#: packages/simple_support_system/elements/dashboard/license_check.php:36
+msgid "You have not connected your site to the Marketplace. To benefit from updates, connect your site to the Marketplace and assign the purchased licenses."
+msgstr "Sie haben Ihre Website nicht mit dem Marketplace verbunden. Um von Updates zu profitieren, verbinden Sie Ihre Website mit dem Marketplace und weisen Sie die erworbenen Lizenzen zu."
+
+#: packages/simple_support_system/elements/dashboard/reminder.php:32
+#, php-format
+msgid "Rate this add-on on concrete5.org and as a thank-you gift you can choose another add-on of mine up to $35. This offer may only be claimed once. Click %s to rate now."
+msgstr "Bewerten Sie dieses Add-on auf concrete5.org und als Dankeschön-Geschenk können Sie ein weiteres Add-on von mir bis zu 35 $ wählen. Dieses Angebot kann nur einmal in Anspruch genommen werden. Klicken Sie %s, um jetzt zu bewerten."
+
+#: packages/simple_support_system/elements/header/project.php:31
+#: packages/simple_support_system/elements/header/project.php:64
+msgid "Reset Search"
+msgstr "Suche zurücksetzen"
+
+#: packages/simple_support_system/elements/header/project.php:37
+#: packages/simple_support_system/elements/header/project.php:70
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: packages/simple_support_system/elements/header/project.php:40
+#: packages/simple_support_system/elements/header/project.php:73
+msgid "Search"
+msgstr "Suche"
+
+#: packages/simple_support_system/elements/header/project.php:50
+msgid "Add Entry"
+msgstr "Eintrag hinzufügen"
+
+#: packages/simple_support_system/elements/header/project.php:86
+msgid "Add Project"
+msgstr "Projekt hinzufügen"
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/projects.php:47
+msgid "The project has been successfully removed."
+msgstr "Das Projekt wurde erfolgreich entfernt."
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/projects.php:53
+msgid "The project has been successfully updated."
+msgstr "Das Projekt wurde erfolgreich aktualisiert."
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/projects.php:67
+msgid "You need to enter a valid project name."
+msgstr "Sie müssen einen gültigen Projektnamen eingeben."
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/projects.php:68
+msgid "You need to enter a valid project handle."
+msgstr "Sie müssen ein gültiges Projekthandle eingeben."
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/settings.php:38
+msgid "You need to enter a valid mail address."
+msgstr "Sie müssen eine gültige E-Mail-Adresse eingeben."
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/settings.php:39
+msgid "You need to select the detail page."
+msgstr "Sie müssen die Detailseite auswählen."
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/settings.php:49
+msgid "The settings has been successfully updated"
+msgstr "Die Einstellungen wurden erfolgreich aktualisiert."
+
+#: packages/simple_support_system/controllers/single_page/dashboard/simple_support_system/settings.php:51
+msgid "You need to select a valid detail page."
+msgstr "Sie müssen eine gültige Detailseite auswählen."
+
+#: packages/simple_support_system/controllers/dialog/support/create_ticket.php:56
+msgid "Ticket Created"
+msgstr "Ticket erstellt"
+
+#: packages/simple_support_system/views/dialogs/support/create_ticket.php:85
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Project.php:188
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Project.php:190
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Project.php:205
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Project.php:207
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:438
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:440
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:455
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:457
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/TicketComment.php:203
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/TicketComment.php:205
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/TicketComment.php:220
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/TicketComment.php:222
+msgid "Invalid Date"
+msgstr "Ungültiges Datum"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:162
+msgid "New"
+msgstr "Neu"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:168
+msgid "Won't fixed"
+msgstr "Won't fixed"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/Ticket.php:268
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Entity/TicketComment.php:106
+msgid "Former User"
+msgstr "Ehemaliger Benutzer"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/ColumnSet/Column/CreatedAtColumn.php:28
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/Field/Field/CreatedAtField.php:39
+msgid "Created At"
+msgstr "Erstellt am"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/ColumnSet/Column/IdColumn.php:28
+msgid "Id"
+msgstr "ID"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/ColumnSet/Column/UpdatedAtColumn.php:28
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/Field/Field/UpdatedAtField.php:39
+msgid "Updated At"
+msgstr "Aktualisiert an/am"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/Field/Field/CreatedAtField.php:47
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/Field/Field/UpdatedAtField.php:47
+msgid "to"
+msgstr "bis"
+
+#: packages/simple_support_system/src/Bitter/SimpleSupportSystem/Search/Project/Field/Manager.php:30
+msgid "Core Properties"
+msgstr "Kerneigenschaften"

@@ -1,0 +1,38 @@
+.ccm-page .header-actions {
+    margin-bottom: 15px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.ccm-page .clearfix {
+    clear: both;
+}
+
+.ccm-page .ticket-comments .ticket-comments-headline {
+    margin-bottom: 15px;
+}
+
+.ccm-page .ticket-details {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.ccm-page .ticket-comments .ticket-comment:not(:last-child) {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.ccm-page .alert li, .ccm-page .alert ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ccm-page .ticket-attachments ul ,.ccm-page .ticket-attachments li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
