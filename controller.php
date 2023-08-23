@@ -22,8 +22,8 @@ use Exception;
 class Controller extends Package implements ProviderAggregateInterface
 {
     protected $pkgHandle = 'simple_support_system';
-    protected $pkgVersion = '1.0.0';
-    protected $appVersionRequired = '8.0.0';
+    protected $pkgVersion = '1.5.0';
+    protected $appVersionRequired = '9.0.0';
     protected $pkgAutoloaderRegistries = [
         'src/Bitter/SimpleSupportSystem' => 'Bitter\SimpleSupportSystem',
     ];

@@ -16,7 +16,7 @@ class ManagerServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app['manager/search_field/project'] = $this->app->share(function ($app) {
+        $this->app->singleton("manager/search_field/project", function ($app) {
             return $app->make('Bitter\SimpleSupportSystem\Search\Project\Field\Manager');
         });
     }

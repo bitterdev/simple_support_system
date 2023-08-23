@@ -24,6 +24,7 @@ class Controller extends BlockController
     protected $entityManager;
     /** @var ResponseFactory */
     protected $responseFactory;
+    protected $btExportPageColumns = ["ticketDetailPageId", "createTicketPageId"];
 
     public function on_start()
     {
@@ -58,6 +59,7 @@ class Controller extends BlockController
     public function add()
     {
         $this->set("ticketDetailPageId", 0);
+        $this->set("createTicketPageId", null);
     }
 
     /** @noinspection PhpUnused */

@@ -20,9 +20,6 @@ $app = Application::getFacadeApplication();
 /** @var Form $form */
 $form = $app->make(Form::class);
 
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/help', null, 'simple_support_system');
-
 ?>
 
 <div class="checkbox">

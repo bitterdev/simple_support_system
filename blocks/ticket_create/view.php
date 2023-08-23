@@ -50,7 +50,7 @@ $token = $app->make(Token::class);
         </div>
     <?php } ?>
 
-    <?php if ($error instanceof ErrorList && $error->has()) { ?>
+    <?php if (isset($error) && $error instanceof ErrorList && $error->has()) { ?>
         <div class="alert alert-danger">
             <?php /** @noinspection PhpDeprecationInspection */
             echo $error->output(); ?>

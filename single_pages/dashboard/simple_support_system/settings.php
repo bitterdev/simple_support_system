@@ -28,13 +28,6 @@ $pageSelector = $app->make(PageSelector::class);
 /** @var Token $token */
 $token = $app->make(Token::class);
 
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/help', null, 'simple_support_system');
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/reminder', ["packageHandle" => "simple_support_system", "rateUrl" => "https://www.concrete5.org/marketplace/addons/simple-support-system/reviews"], 'simple_support_system');
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/license_check', ["packageHandle" => "simple_support_system"], 'simple_support_system');
-
 ?>
 
 <form action="#" method="post">
@@ -60,12 +53,9 @@ View::element('/dashboard/license_check', ["packageHandle" => "simple_support_sy
 
     <div class="ccm-dashboard-form-actions-wrapper">
         <div class="ccm-dashboard-form-actions ">
-            <button type="submit" class="btn btn-primary pull-right">
+            <button type="submit" class="btn btn-primary float-end">
                 <i class="fa fa-save"></i> <?php echo t("Save"); ?>
             </button>
         </div>
     </div>
 </form>
-<?php
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/did_you_know', ["packageHandle" => "simple_support_system"], 'simple_support_system');

@@ -20,13 +20,6 @@ use Concrete\Core\View\View;
 /** @var $form Form */
 /** @var $token Token */
 
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/help', null, 'simple_support_system');
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/reminder', ["packageHandle" => "simple_support_system", "rateUrl" => "https://www.concrete5.org/marketplace/addons/simple-support-system/reviews"], 'simple_support_system');
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/license_check', ["packageHandle" => "simple_support_system"], 'simple_support_system');
-
 ?>
 <form action="#" method="post">
     <?php echo $token->output("save_project_entity"); ?>
@@ -71,11 +64,11 @@ View::element('/dashboard/license_check', ["packageHandle" => "simple_support_sy
 
     <div class="ccm-dashboard-form-actions-wrapper">
         <div class="ccm-dashboard-form-actions">
-            <a href="<?php echo Url::to("/dashboard/simple_support_system/projects"); ?>" class="btn btn-default">
+            <a href="<?php echo Url::to("/dashboard/simple_support_system/projects"); ?>" class="btn btn-secondary">
                 <i class="fa fa-chevron-left"></i> <?php echo t('Back'); ?>
             </a>
 
-            <div class="pull-right">
+            <div class="float-end">
                 <button type="submit" class="btn btn-primary">
                     <i class="fa fa-save" aria-hidden="true"></i> <?php echo t('Save'); ?>
                 </button>
@@ -83,6 +76,3 @@ View::element('/dashboard/license_check', ["packageHandle" => "simple_support_sy
         </div>
     </div>
 </form>
-<?php
-/** @noinspection PhpUnhandledExceptionInspection */
-View::element('/dashboard/did_you_know', ["packageHandle" => "simple_support_system"], 'simple_support_system');

@@ -26,6 +26,8 @@ $router->all('/advanced_search/preset/edit', 'Preset\Edit::view');
 $router->all('/advanced_search/preset/edit/edit_search_preset', 'Preset\Edit::edit_search_preset');
 $router->all('/advanced_search/preset/delete', 'Preset\Delete::view');
 $router->all('/advanced_search/preset/delete/remove_search_preset', 'Preset\Delete::remove_search_preset');
+$router->all('/bulk/delete', 'Bulk\Delete::view');
+$router->all('/bulk/delete/submit', 'Bulk\Delete::submit');
 
 $router->all('/ccm/system/search/project/basic', '\Concrete\Package\SimpleSupportSystem\Controller\Search\Project::searchBasic');
 $router->all('/ccm/system/search/project/current', '\Concrete\Package\SimpleSupportSystem\Controller\Search\Project::searchCurrent');

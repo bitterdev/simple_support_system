@@ -10,14 +10,28 @@
 
 namespace Concrete\Package\SimpleSupportSystem\Controller\SinglePage\Dashboard\SimpleSupportSystem;
 
+use Bitter\SimpleSupportSystem\Entity\Search\SavedProjectSearch;
+use Bitter\SimpleSupportSystem\Navigation\Breadcrumb\Dashboard\DashboardProjectsBreadcrumbFactory;
+use Bitter\SimpleSupportSystem\Search\Project\Menu\MenuFactory;
+use Bitter\SimpleSupportSystem\Search\Project\SearchProvider;
+use Concrete\Core\Entity\Search\Query;
+use Concrete\Core\Filesystem\Element;
+use Concrete\Core\Filesystem\ElementManager;
 use Concrete\Core\Form\Service\Validation;
 use Concrete\Core\Page\Controller\DashboardPageController;
 use Concrete\Core\Http\ResponseFactory;
 use Concrete\Core\Http\Request;
+use Concrete\Core\Search\Field\Field\KeywordsField;
+use Concrete\Core\Search\Query\Modifier\AutoSortColumnRequestModifier;
+use Concrete\Core\Search\Query\Modifier\ItemsPerPageRequestModifier;
+use Concrete\Core\Search\Query\QueryFactory;
+use Concrete\Core\Search\Query\QueryModifier;
+use Concrete\Core\Search\Result\Result;
+use Concrete\Core\Search\Result\ResultFactory;
 use Concrete\Core\Support\Facade\Url;
+use Illuminate\Contracts\Container\BindingResolutionException;
 use Symfony\Component\HttpFoundation\Response;
 use Bitter\SimpleSupportSystem\Entity\Project as ProjectEntity;
-use Concrete\Package\SimpleSupportSystem\Controller\Element\Header\Project as HeaderController;
 use DateTime;
 
 class Projects extends DashboardPageController
@@ -26,6 +40,160 @@ class Projects extends DashboardPageController
     protected $responseFactory;
     /** @var Request */
     protected $request;
+
+    /** @var Element */
+    protected $headerMenu;
+    /** @var Element */
+    protected $headerSearch;
+
+    /**
+     * @return SearchProvider
+     * @throws BindingResolutionException
+     */
+    protected function getSearchProvider(): SearchProvider
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        return $this->app->make(SearchProvider::class);
+    }
+
+    /**
+     * @return QueryFactory
+     * @throws BindingResolutionException
+     */
+    protected function getQueryFactory(): QueryFactory
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        return $this->app->make(QueryFactory::class);
+    }
+
+    protected function getHeaderMenu(): Element
+    {
+        if (!isset($this->headerMenu)) {
+            /** @noinspection PhpUnhandledExceptionInspection */
+            $this->headerMenu = $this->app->make(ElementManager::class)->get('projects/search/menu', 'simple_support_system');
+        }
+
+        return $this->headerMenu;
+    }
+
+    protected function getHeaderSearch(): Element
+    {
+        if (!isset($this->headerSearch)) {
+            /** @noinspection PhpUnhandledExceptionInspection */
+            $this->headerSearch = $this->app->make(ElementManager::class)->get('projects/search/search', 'simple_support_system');
+        }
+
+        return $this->headerSearch;
+    }
+
+    /**
+     * @param Result $result
+     * @throws BindingResolutionException
+     */
+    protected function renderSearchResult(Result $result)
+    {
+        $headerMenu = $this->getHeaderMenu();
+        $headerSearch = $this->getHeaderSearch();
+        /** @noinspection PhpPossiblePolymorphicInvocationInspection */
+        $headerMenu->getElementController()->setQuery($result->getQuery());
+        /** @noinspection PhpPossiblePolymorphicInvocationInspection */
+        $headerSearch->getElementController()->setQuery($result->getQuery());
+
+        $this->set('resultsBulkMenu', $this->app->make(MenuFactory::class)->createBulkMenu());
+        $this->set('result', $result);
+        $this->set('headerMenu', $headerMenu);
+        $this->set('headerSearch', $headerSearch);
+
+        $this->setThemeViewTemplate('full.php');
+    }
+
+    /**
+     * @param Query $query
+     * @return Result
+     * @throws BindingResolutionException
+     */
+    protected function createSearchResult(Query $query): Result
+    {
+        $provider = $this->app->make(SearchProvider::class);
+        $resultFactory = $this->app->make(ResultFactory::class);
+        $queryModifier = $this->app->make(QueryModifier::class);
+
+        $queryModifier->addModifier(new AutoSortColumnRequestModifier($provider, $this->request, Request::METHOD_GET));
+        $queryModifier->addModifier(new ItemsPerPageRequestModifier($provider, $this->request, Request::METHOD_GET));
+
+        $query = $queryModifier->process($query);
+
+        return $resultFactory->createFromQuery($provider, $query);
+    }
+
+    /** @noinspection PhpMissingReturnTypeInspection */
+    protected function getSearchKeywordsField()
+    {
+        $keywords = null;
+
+        if ($this->request->query->has('keywords')) {
+            $keywords = $this->request->query->get('keywords');
+        }
+
+        return new KeywordsField($keywords);
+    }
+
+    /**
+     * @throws BindingResolutionException
+     */
+    public function advanced_search()
+    {
+        $query = $this->getQueryFactory()->createFromAdvancedSearchRequest(
+            $this->getSearchProvider(), $this->request, Request::METHOD_GET
+        );
+
+        $result = $this->createSearchResult($query);
+
+        $this->renderSearchResult($result);
+    }
+
+    /**
+     * @throws BindingResolutionException
+     */
+    public function preset($presetID = null)
+    {
+        if ($presetID) {
+            $preset = $this->entityManager->find(SavedProjectSearch::class, $presetID);
+
+            if ($preset) {
+                $query = $this->getQueryFactory()->createFromSavedSearch($preset);
+                $result = $this->createSearchResult($query);
+                $this->renderSearchResult($result);
+
+                return;
+            }
+        }
+
+        $this->view();
+    }
+
+    /**
+     * @return DashboardProjectsBreadcrumbFactory
+     * @throws BindingResolutionException
+     */
+    protected function createBreadcrumbFactory(): DashboardProjectsBreadcrumbFactory
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        return $this->app->make(DashboardProjectsBreadcrumbFactory::class);
+    }
+
+    public function view()
+    {
+        $query = $this->getQueryFactory()->createQuery($this->getSearchProvider(), [
+            $this->getSearchKeywordsField()
+        ]);
+
+        $result = $this->createSearchResult($query);
+
+        $this->renderSearchResult($result);
+
+        $this->headerSearch->getElementController()->setQuery(null);
+    }
 
     public function on_start()
     {
@@ -152,18 +320,6 @@ class Projects extends DashboardPageController
         } else {
             $this->responseFactory->notFound(null)->send();
             $this->app->shutdown();
-        }
-    }
-
-    public function view()
-    {
-        $headerMenu = new HeaderController();
-        $this->set('headerMenu', $headerMenu);
-        /** @var \Concrete\Package\SimpleSupportSystem\Controller\Search\Project $searchProvider */
-        $searchProvider = $this->app->make(\Concrete\Package\SimpleSupportSystem\Controller\Search\Project::class);
-        $result = $searchProvider->getCurrentSearchObject();
-        if (is_object($result)) {
-            $this->set('result', $result);
         }
     }
 }

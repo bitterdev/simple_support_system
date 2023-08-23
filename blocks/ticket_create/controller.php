@@ -63,6 +63,7 @@ class Controller extends BlockController
     protected $loggerFactory;
     /** @var \Psr\Log\LoggerInterface */
     protected $logger;
+    protected $btExportPageColumns = ["redirectCID"];
 
     public function on_start()
     {

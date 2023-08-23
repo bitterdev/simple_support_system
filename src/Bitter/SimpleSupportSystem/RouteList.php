@@ -34,10 +34,6 @@ class RouteList implements RouteListInterface
             ->setPrefix('/ccm/system/dialogs/project')
             ->routes('dialogs/project.php', 'simple_support_system');
 
-        $router->buildGroup()->setNamespace('Concrete\Package\SimpleSupportSystem\Controller\Dialog\Support')
-            ->setPrefix('/ccm/system/dialogs/simple_support_system')
-            ->routes('dialogs/support.php', 'simple_support_system');
-
         $router->buildGroup()->setNamespace('Concrete\Package\SimpleSupportSystem\Controller\Search')
             ->setPrefix('/ccm/system/search/project')
             ->routes('search/project.php', 'simple_support_system');

@@ -20,6 +20,7 @@ class Controller extends BlockController
     protected $btTable = "btProjectList";
     /** @var EntityManagerInterface */
     protected $entityManager;
+    protected $btExportPageColumns = ["ticketListPageId", "createTicketPageId"];
 
     public function on_start()
     {
@@ -53,6 +54,7 @@ class Controller extends BlockController
     public function add()
     {
         $this->set("ticketListPageId", 0);
+        $this->set("createTicketPageId", null);
     }
 
     public function view()

@@ -38,7 +38,9 @@ class ProjectHandleField extends AbstractField
      */
     public function filterList(ItemList $list)
     {
-        $list->filterByProjectHandle($this->data['projectHandle']);
+        if (isset($this->data['projectHandle'])) {
+            $list->filterByProjectHandle($this->data['projectHandle']);
+        }
     }
     
     public function renderSearchField()
@@ -46,6 +48,6 @@ class ProjectHandleField extends AbstractField
         $app = Application::getFacadeApplication();
         /** @var Form $form */
         $form = $app->make(Form::class);
-        return $form->text('projectHandle', $this->data['projectHandle']);
+        return $form->text('projectHandle', $this->data['projectHandle'] ?? null);
     }
 }
