@@ -307,7 +307,7 @@ class Controller extends BlockController
                             if (!$errorList->has()) {
                                 $ticketCreateEvent = new TicketCreate();
                                 $ticketCreateEvent->setTicket($ticket);
-                                $this->eventDispatcher->dispatch("on_create_ticket", $ticketCreateEvent);
+                                $this->eventDispatcher->dispatch( $ticketCreateEvent, "on_create_ticket");
 
                                 $this->logger->info(t("Ticket %s was successfully created.", $ticket->getTicketId()));
 

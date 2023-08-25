@@ -270,7 +270,7 @@ class Controller extends BlockController
                         if (!$errorList->has()) {
                             $ticketCommentCreateEvent = new TicketCommentCreate();
                             $ticketCommentCreateEvent->setTicketComment($ticketComment);
-                            $this->eventDispatcher->dispatch("on_create_ticket_comment", $ticketCommentCreateEvent);
+                            $this->eventDispatcher->dispatch( $ticketCommentCreateEvent, "on_create_ticket_comment");
 
                             $this->logger->info(t("Comment was added to ticket %s.", $ticket->getTicketId()));
 
@@ -314,7 +314,7 @@ class Controller extends BlockController
 
             $ticketStateChangEvent = new TicketStateChange();
             $ticketStateChangEvent->setTicket($ticket);
-            $this->eventDispatcher->dispatch("on_ticket_state_change", $ticketStateChangEvent);
+            $this->eventDispatcher->dispatch( $ticketStateChangEvent, "on_ticket_state_change");
 
             $this->logger->info(t("State of ticket %s has been changed.", $ticket->getTicketId()));
 
