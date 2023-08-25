@@ -21,7 +21,7 @@ use Concrete\Core\Support\Facade\Url;
 /** @var Project|null $project */
 ?>
 
-<?php if ($project instanceof Project) { ?>
+<?php if (isset($project) && $project instanceof Project) { ?>
     <div class="header-actions">
         <a href="<?php echo (string)Url::to(Page::getByID($createTicketPageId), "filter_by_project", $project->getProjectId()); ?>"
            class="btn btn-primary pull-right">

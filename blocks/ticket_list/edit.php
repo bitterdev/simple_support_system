@@ -32,6 +32,6 @@ $pageSelector = $app->make(PageSelector::class);
 </div>
 
 <div class="form-group">
-    <?php echo $form->label('createTicketPageId', t("Create TicketPage")); ?>
+    <?php echo $form->label('createTicketPageId', t("Create Ticket Page")); ?>
     <?php echo $pageSelector->selectPage('createTicketPageId', $createTicketPageId); ?>
 </div>
