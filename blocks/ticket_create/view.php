@@ -64,7 +64,7 @@ $token = $app->make(Token::class);
         <?php if (count($projectList) > 1) { ?>
             <div class="form-group">
                 <?php echo $form->label('projectId', t("Project")); ?>
-                <?php echo $form->select('projectId', $projectList, $projectId); ?>
+                <?php echo $form->select('projectId', $projectList, $projectId ?? null); ?>
             </div>
         <?php } else { ?>
             <?php echo $form->hidden('projectId', key($projectList)); ?>
