@@ -198,7 +198,7 @@ $captcha = $app->make(CaptchaInterface::class);
 
                                 <div class="form-group">
                                     <?php echo $form->label("comment", t("Comment")); ?>
-                                    <?php echo $editor->outputStandardEditor("comment"); ?>
+                                    <?php echo $form->textarea("comment"); ?>
                                 </div>
 
                                 <?php if ((int)$displayCaptcha === 1) { ?>

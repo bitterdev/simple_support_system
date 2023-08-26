@@ -84,7 +84,7 @@ $token = $app->make(Token::class);
 
         <div class="form-group">
             <?php echo $form->label('content', t("Content")); ?>
-            <?php echo $editor->outputStandardEditor('content'); ?>
+            <?php echo $form->textarea("content"); ?>
         </div>
 
         <div class="form-group">
