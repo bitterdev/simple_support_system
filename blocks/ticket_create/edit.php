@@ -26,6 +26,7 @@ $form = $app->make(Form::class);
 /** @var PageSelector $pageSelector */
 $pageSelector = $app->make(PageSelector::class);
 
+View::element("dashboard/help_blocktypes", [], "simple_support_system");
 ?>
 
 <div class="form-group">

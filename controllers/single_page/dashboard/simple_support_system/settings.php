@@ -12,10 +12,10 @@ namespace Concrete\Package\SimpleSupportSystem\Controller\SinglePage\Dashboard\S
 
 use Concrete\Core\Config\Repository\Repository;
 use Concrete\Core\Form\Service\Validation;
-use Concrete\Core\Page\Controller\DashboardPageController;
+use Concrete\Core\Page\Controller\DashboardSitePageController;
 use Concrete\Core\Page\Page;
 
-class Settings extends DashboardPageController
+class Settings extends DashboardSitePageController
 {
     /** @var Repository */
     protected $config;
@@ -26,7 +26,7 @@ class Settings extends DashboardPageController
     {
         parent::on_start();
 
-        $this->config = $this->app->make(Repository::class);
+        $this->config = $this->getSite()->getConfigRepository();
         $this->formValidator = $this->app->make(Validation::class);
     }
 

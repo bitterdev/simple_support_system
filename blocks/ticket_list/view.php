@@ -19,6 +19,7 @@ use Concrete\Core\Support\Facade\Url;
 /** @var int $createTicketPageId */
 /** @var Ticket[] $tickets */
 /** @var Project|null $project */
+
 ?>
 
 <?php if (isset($project) && $project instanceof Project) { ?>

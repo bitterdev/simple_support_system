@@ -61,8 +61,10 @@ class Controller extends BlockController
     {
         $projects = [];
 
+        /** @var \Concrete\Core\Site\Service $siteService */
+        $siteService = $this->app->make(\Concrete\Core\Site\Service::class);
         /** @var Project[] $allProjects */
-        $allProjects = $this->entityManager->getRepository(Project::class)->findAll();
+        $allProjects = $this->entityManager->getRepository(Project::class)->findBy(["site" => $siteService->getSite()]);
         foreach($allProjects as $project) {
             if (count($project->getTickets()) > 0) {
                 $projects[] = $project;

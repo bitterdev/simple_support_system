@@ -16,11 +16,17 @@ use Concrete\Core\Support\Facade\Url;
 use Concrete\Core\Validation\CSRF\Token;
 use Concrete\Core\View\View;
 
+/** @var array $sites */
 /** @var $entry Project */
 /** @var $form Form */
 /** @var $token Token */
 
 ?>
+
+<div class="ccm-dashboard-header-buttons">
+    <?php \Concrete\Core\View\View::element("dashboard/help", [], "simple_support_system"); ?>
+</div>
+
 <form action="#" method="post">
     <?php echo $token->output("save_project_entity"); ?>
 
@@ -60,6 +66,11 @@ use Concrete\Core\View\View;
                 "max-length" => "255",
             ]
         ); ?>
+    </div>
+
+    <div class="form-group">
+        <?php echo $form->label("siteId", t("Site")); ?>
+        <?php echo $form->select("siteId", $sites, $entry->getSite() instanceof \Concrete\Core\Entity\Site\Site ? $entry->getSite()->getSiteID() : null); ?>
     </div>
 
     <div class="ccm-dashboard-form-actions-wrapper">

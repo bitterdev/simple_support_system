@@ -17,12 +17,13 @@ use Concrete\Core\Package\Package;
 use Concrete\Core\Database\EntityManager\Provider\ProviderAggregateInterface;
 use Concrete\Core\Database\EntityManager\Provider\StandardPackageProvider;
 use Concrete\Core\Page\Page;
+use Concrete\Core\Site\Service;
 use Exception;
 
 class Controller extends Package implements ProviderAggregateInterface
 {
     protected $pkgHandle = 'simple_support_system';
-    protected $pkgVersion = '1.5.0';
+    protected $pkgVersion = '1.6.0';
     protected $appVersionRequired = '9.0.0';
     protected $pkgAutoloaderRegistries = [
         'src/Bitter/SimpleSupportSystem' => 'Bitter\SimpleSupportSystem',
@@ -77,8 +78,10 @@ class Controller extends Package implements ProviderAggregateInterface
     {
         parent::install();
         $this->installContentFile('install.xml');
-        /** @var Repository $config */
-        $config = $this->app->make(Repository::class);
+        /** @var Service $siteService */
+        $siteService = $this->app->make(Service::class);
+        $site = $siteService->getSite();
+        $config = $site->getConfigRepository();
         $config->save("simple_support_system.ticket_detail_page", Page::getByPath("/support/project/tickets")->getCollectionID());
     }
 

@@ -61,7 +61,7 @@ class Tickets implements ApplicationAwareInterface
         Request $request,
         Validation $validation,
         ResponseFactory $responseFactory,
-        Repository $config,
+        \Concrete\Core\Site\Service $siteService,
         Service $mailService,
         EventDispatcher $eventDispatcher,
         LoggerFactory $loggerFactory
@@ -71,7 +71,7 @@ class Tickets implements ApplicationAwareInterface
         $this->request = $request;
         $this->validation = $validation;
         $this->responseFactory = $responseFactory;
-        $this->config = $config;
+        $this->config = $siteService->getSite()->getConfigRepository();
         $this->mailService = $mailService;
         $this->eventDispatcher = $eventDispatcher;
         $this->loggerFactory = $loggerFactory;

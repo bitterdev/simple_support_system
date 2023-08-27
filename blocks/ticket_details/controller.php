@@ -59,7 +59,9 @@ class Controller extends BlockController
         $this->responseFactory = $this->app->make(ResponseFactory::class);
         $this->entityManager = $this->app->make(EntityManagerInterface::class);
         $this->mailService = $this->app->make(Service::class);
-        $this->config = $this->app->make(Repository::class);
+        /** @var \Concrete\Core\Site\Service $siteService */
+        $siteService = $this->app->make(\Concrete\Core\Site\Service::class);
+        $this->config = $siteService->getSite()->getConfigRepository();
         $this->eventDispatcher = $this->app->make(EventDispatcherInterface::class);
         $this->loggerFactory = $this->app->make(LoggerFactory::class);
         $this->logger = $this->loggerFactory->createLogger('simple_support_system');

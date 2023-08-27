@@ -28,7 +28,12 @@ $pageSelector = $app->make(PageSelector::class);
 /** @var Token $token */
 $token = $app->make(Token::class);
 
+
 ?>
+
+<div class="ccm-dashboard-header-buttons">
+    <?php \Concrete\Core\View\View::element("dashboard/help", [], "simple_support_system"); ?>
+</div>
 
 <form action="#" method="post">
     <?php echo $token->output("update_settings"); ?>

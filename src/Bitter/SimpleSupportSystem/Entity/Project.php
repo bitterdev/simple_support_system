@@ -61,6 +61,14 @@ class Project
      */
     protected $updatedAt = null;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="\Concrete\Core\Entity\Site\Site")
+     * @ORM\JoinColumn(name="siteID", referencedColumnName="siteID", onDelete="CASCADE")
+     *
+     * @var \Concrete\Core\Entity\Site\Site|null
+     */
+    protected $site = null;
+
     public function __construct()
     {
         $this->tickets = new ArrayCollection();
@@ -189,6 +197,24 @@ class Project
         } catch (Exception $e) {
             return t("Invalid Date");
         }
+    }
+
+    /**
+     * @return \Concrete\Core\Entity\Site\Site|null
+     */
+    public function getSite(): ?\Concrete\Core\Entity\Site\Site
+    {
+        return $this->site;
+    }
+
+    /**
+     * @param \Concrete\Core\Entity\Site\Site|null $site
+     * @return Project
+     */
+    public function setSite(?\Concrete\Core\Entity\Site\Site $site): Project
+    {
+        $this->site = $site;
+        return $this;
     }
 
     /**

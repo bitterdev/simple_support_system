@@ -28,6 +28,7 @@ use Concrete\Core\Search\Query\QueryFactory;
 use Concrete\Core\Search\Query\QueryModifier;
 use Concrete\Core\Search\Result\Result;
 use Concrete\Core\Search\Result\ResultFactory;
+use Concrete\Core\Site\Service;
 use Concrete\Core\Support\Facade\Url;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Symfony\Component\HttpFoundation\Response;
@@ -203,9 +204,24 @@ class Projects extends DashboardPageController
         $this->request = $this->app->make(Request::class);
     }
 
+    private function getSites(): array
+    {
+        $sites = [];
+
+        /** @var Service $siteService */
+        $siteService = $this->app->make(Service::class);
+
+        foreach($siteService->getList() as $site) {
+            $sites[$site->getSiteID()] = $site->getSiteName();
+        }
+
+        return $sites;
+    }
+
     private function setDefaults($entry = null)
     {
 
+        $this->set("sites", $this->getSites());
         $this->set("entry", $entry);
         $this->render("/dashboard/simple_support_system/projects/edit");
     }
@@ -258,6 +274,10 @@ class Projects extends DashboardPageController
                 $entry->setProjectHandle($data["projectHandle"]);
                 $entry->setCreatedAt(new DateTime());
                 $entry->setUpdatedAt(new DateTime());
+                /** @var Service $siteService */
+                $siteService = $this->app->make(Service::class);
+                $site = $siteService->getByID($this->request->request->get("siteId"));
+                $entry->setSite($site);
 
                 $this->entityManager->persist($entry);
                 $this->entityManager->flush();
@@ -287,6 +307,10 @@ class Projects extends DashboardPageController
                     $entry->setProjectName($data["projectName"]);
                     $entry->setProjectHandle($data["projectHandle"]);
                     $entry->setUpdatedAt(new DateTime());
+                    /** @var Service $siteService */
+                    $siteService = $this->app->make(Service::class);
+                    $site = $siteService->getByID($this->request->request->get("siteId"));
+                    $entry->setSite($site);
 
                     $this->entityManager->persist($entry);
                     $this->entityManager->flush();

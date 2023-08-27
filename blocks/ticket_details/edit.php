@@ -20,6 +20,7 @@ $app = Application::getFacadeApplication();
 /** @var Form $form */
 $form = $app->make(Form::class);
 
+View::element("dashboard/help_blocktypes", [], "simple_support_system");
 ?>
 
 <div class="checkbox">

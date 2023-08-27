@@ -72,7 +72,9 @@ class Controller extends BlockController
         $this->responseFactory = $this->app->make(ResponseFactory::class);
         $this->entityManager = $this->app->make(EntityManagerInterface::class);
         $this->mailService = $this->app->make(Service::class);
-        $this->config = $this->app->make(Repository::class);
+        /** @var \Concrete\Core\Site\Service $siteService */
+        $siteService = $this->app->make(\Concrete\Core\Site\Service::class);
+        $this->config = $siteService->getSite()->getConfigRepository();
         $this->eventDispatcher = $this->app->make(EventDispatcherInterface::class);
         $this->loggerFactory = $this->app->make(LoggerFactory::class);
         $this->logger = $this->loggerFactory->createLogger('simple_support_system');
@@ -135,8 +137,10 @@ class Controller extends BlockController
     {
         $projectList = [];
 
+        /** @var \Concrete\Core\Site\Service $siteService */
+        $siteService = $this->app->make(\Concrete\Core\Site\Service::class);
         /** @var Project[] $projects */
-        $projects = $this->entityManager->getRepository(Project::class)->findAll();
+        $projects = $this->entityManager->getRepository(Project::class)->findBy(["site" => $siteService->getSite()]);
 
         foreach ($projects as $project) {
             $projectList[$project->getProjectId()] = $project->getProjectName();
