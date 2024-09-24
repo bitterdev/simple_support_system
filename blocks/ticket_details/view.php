@@ -51,50 +51,50 @@ $captcha = $app->make(CaptchaInterface::class);
                     <?php echo t("Resolve"); ?>
                 </a>
 
-                <button class="btn btn-default dropdown-toggle" type="button" id="workflowMenu" data-toggle="dropdown"
+                <button class="btn btn-default dropdown-toggle" type="button" id="workflowMenu" data-bs-toggle='dropdown' data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="true">
                     <?php echo t("Workflow"); ?> <span class="caret"></span>
                 </button>
 
                 <ul class="dropdown-menu" aria-labelledby="workflowMenu">
                     <li>
-                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_OPEN); ?>">
+                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_OPEN); ?>" class="dropdown-item">
                             <?php echo t("Open"); ?>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_ON_HOLD); ?>">
+                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_ON_HOLD); ?>" class="dropdown-item">
                             <?php echo t("On Hold"); ?>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_RESOLVED); ?>">
+                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_RESOLVED); ?>" class="dropdown-item">
                             <?php echo t("Resolved"); ?>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_DUPLICATE); ?>">
+                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_DUPLICATE); ?>" class="dropdown-item">
                             <?php echo t("Duplicate"); ?>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_INVALID); ?>">
+                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_INVALID); ?>" class="dropdown-item">
                             <?php echo t("Invalid"); ?>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_WONT_FIX); ?>">
+                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_WONT_FIX); ?>" class="dropdown-item">
                             <?php echo t("Won't fix"); ?>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_CLOSED); ?>">
+                        <a href="<?php echo (string)Url::to(Page::getCurrentPage(), "workflow", $ticket->getTicketId(), TicketState::TICKET_STATE_CLOSED); ?>" class="dropdown-item">
                             <?php echo t("Closed"); ?>
                         </a>
                     </li>
