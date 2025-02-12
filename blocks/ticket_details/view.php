@@ -27,6 +27,8 @@ use Concrete\Core\Captcha\CaptchaInterface;
 /** @var Controller $controller */
 /** @var Ticket $ticket */
 
+$ticket = $ticket ?? null;
+
 $user = new User();
 $app = Application::getFacadeApplication();
 /** @var Form $form */
