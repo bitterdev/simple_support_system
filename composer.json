@@ -1,5 +1,6 @@
 {
   "name": "bitter/simple_support_system",
+  "description": "Feature-rich self-hosted support system that fully complies with GDPR and doesn't require any 3rd party services.",
   "type": "concrete5-package",
   "autoload": {
     "psr-4": {
