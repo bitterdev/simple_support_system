@@ -59,6 +59,13 @@ jobs:
             echo "File $FILE_PATH not found, skipping upload."
           fi
 
+      - name: Upload ZIP to Concrete CMS Marketplace
+        uses: bitterdev/concrete-package-uploader@v1
+        with:
+          username: ${{ secrets.CONCRETE_MARKETPLACE_USERNAME }}
+          password: ${{ secrets.CONCRETE_MARKETPLACE_PASSWORD }}
+          packageFile: release/${{ env.PACKAGE_NAME }}.zip
+
       - name: Cleanup trash files and folders
         run: |
           echo "Cleaning up unnecessary files and directories..."
