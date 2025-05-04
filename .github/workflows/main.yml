@@ -62,6 +62,7 @@ jobs:
       - name: Upload ZIP to Concrete CMS Marketplace
         uses: bitterdev/concrete-package-uploader@v1
         with:
+          uuid: ${{ secrets.CONCRETE_MARKETPLACE_UUID }}
           username: ${{ secrets.CONCRETE_MARKETPLACE_USERNAME }}
           password: ${{ secrets.CONCRETE_MARKETPLACE_PASSWORD }}
           packageFile: release/${{ env.PACKAGE_NAME }}.zip

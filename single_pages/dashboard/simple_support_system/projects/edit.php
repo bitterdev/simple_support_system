@@ -27,6 +27,8 @@ use Concrete\Core\View\View;
     <?php \Concrete\Core\View\View::element("dashboard/help", [], "simple_support_system"); ?>
 </div>
 
+<?php \Concrete\Core\View\View::element("dashboard/did_you_know", [], "simple_support_system"); ?>
+
 <form action="#" method="post">
     <?php echo $token->output("save_project_entity"); ?>
 

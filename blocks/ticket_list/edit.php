@@ -26,6 +26,8 @@ $pageSelector = $app->make(PageSelector::class);
 
 \Concrete\Core\View\View::element("dashboard/help_blocktypes", [], "simple_support_system");
 
+/** @noinspection PhpUnhandledExceptionInspection */
+\Concrete\Core\View\View::element("dashboard/did_you_know", [], "simple_support_system");
 ?>
 
 <div class="form-group">
