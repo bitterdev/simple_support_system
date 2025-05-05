@@ -46,7 +46,13 @@ jobs:
           if [ -f "build/package.json" ]; then
             echo "Running npm install..."
             cd build
-            npm ci
+            if [ -f "package-lock.json" ]; then
+              echo "Using npm ci (lockfile found)"
+              npm ci
+            else
+              echo "Using npm install (no lockfile found)"
+              npm install
+            fi
             npm run production
             cd ..
           fi
