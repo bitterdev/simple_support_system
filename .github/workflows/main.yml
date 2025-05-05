@@ -23,19 +23,29 @@ jobs:
       - name: Setup PHP with Composer
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1' # oder andere Version falls benötigt
+          php-version: '8.2'
           tools: composer
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # oder andere stabile Version
+          node-version: '20'
 
       - name: Run composer install if composer.json exists
         run: |
           if [ -f "composer.json" ]; then
             echo "Running composer install..."
             composer install --no-interaction --prefer-dist --no-progress
+          fi
+
+      - name: Run npm install on build, and run npm run production if package.json exists
+        run: |
+          if [ -f "build/package.json" ]; then
+            echo "Running npm install..."
+            cd build
+            npm ci
+            npm run production
+            cd ..
           fi
 
       - name: Run npm install, install grunt and run grunt if package.json exists
@@ -66,6 +76,35 @@ jobs:
           username: ${{ secrets.CONCRETE_MARKETPLACE_USERNAME }}
           password: ${{ secrets.CONCRETE_MARKETPLACE_PASSWORD }}
           packageFile: release/${{ env.PACKAGE_NAME }}.zip
+
+      - name: Create a tag if not exists
+        run: |
+          git fetch --tags
+          if git rev-parse "nightly" >/dev/null 2>&1; then
+            echo "Tag 'nightly' already exists."
+          else
+            git tag -a nightly -m "Nightly build tag"
+            git push origin nightly
+          fi
+
+      - name: Create or update release to GitHub
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: nightly
+          name: Nightly Build
+          draft: false
+          prerelease: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload release asset to GitHub
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: nightly
+          files: release/${{ env.PACKAGE_NAME }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cleanup trash files and folders
         run: |
