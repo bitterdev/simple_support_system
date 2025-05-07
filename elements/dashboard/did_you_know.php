@@ -67,11 +67,11 @@ if ($productList->isMiss()) {
 }
 
 if (!isset($products) || !is_array($products)) {
-    $products = [];
+    $randomProduct = [];
+} else {
+    $randomKey = array_rand($products);
+    $randomProduct = $products[$randomKey];
 }
-
-$randomKey = array_rand($products);
-$randomProduct = $products[$randomKey];
 
 $name = $randomProduct["name"] ?? null;
 $shortDescription = $randomProduct["shortDescription"] ?? null;
