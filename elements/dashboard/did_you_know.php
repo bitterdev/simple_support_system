@@ -66,6 +66,9 @@ if ($productList->isMiss()) {
     $products = $productList->get();
 }
 
+if (!isset($products) || !is_array($products)) {
+    $products = [];
+}
 
 $randomKey = array_rand($products);
 $randomProduct = $products[$randomKey];
